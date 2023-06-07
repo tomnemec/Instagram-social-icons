@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+h1 {
+  font-weight: 100;
+  margin-bottom: 0px;
+}
+p {
+  font-weight: lighter;
+  font-size: 1.5rem;
+  margin-top: 0px;
+}
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+.fade {
+  opacity: 0s;
+  animation: fadeIn 1s 1s ease-in-out forwards;
+  text-align: center;
+  > img {
+    border-radius: 35px;
+    width: 300px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+.icons {
+  opacity: 0;
+  border-radius: 35px;
+  background: rgb(245, 243, 245);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: jumpIn 1s 2s ease-in-out forwards;
+}
+.icon {
+  background: white;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  > img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+}
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+.icon:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.icon:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.icon:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.icon:nth-child(4) {
+  animation-delay: 0.8s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes jumpIn {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
